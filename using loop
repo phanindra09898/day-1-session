@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int sum_of_multiples(int n, int m) {
+    int sum = 0;
+    for (int i = m; i < n; i += m) {
+        sum += i;
+    }
+    return sum;
+}
+
+int main() {
+    int n = 20;
+    int m = 3;
+    int result = sum_of_multiples(n, m);
+    printf("The sum of multiples of %d that are smaller than %d is %d\n", m, n, result);
+    return 0;
+}
