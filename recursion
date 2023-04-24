@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int sum_of_multiples_recursive(int n, int m) {
+    if (n <= m) {
+        return 0;
+    } else {
+        return sum_of_multiples_recursive(n - m, m) + n - m;
+    }
+}
+
+int main() {
+    int n = 20;
+    int m = 3;
+    int result = sum_of_multiples_recursive(n, m);
+    printf("The sum of multiples of %d that are smaller than %d is %d\n", m, n, result);
+    return 0;
+}
