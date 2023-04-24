@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    float num, square, square_root, cube;
+
+    // Read input from user
+    printf("Enter a number: ");
+    scanf("%f", &num);
+
+    // Calculate square
+    square = num * num;
+    printf("Square of %f is %f\n", num, square);
+
+    // Calculate square root
+    square_root = 1.0;
+    while (square_root * square_root <= num) {
+        square_root += 0.1;
+    }
+    printf("Square root of %f is %f\n", num, square_root);
+
+    // Calculate cube
+    cube = num * num * num;
+    printf("Cube of %f is %f\n", num, cube);
+
+    return 0;
+}
